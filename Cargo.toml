@@ -1,0 +1,9 @@
+[package]
+name = "sdl-slides"
+version = "0.1.0"
+authors = ["Jaden Carver <jaden.carver@gmail.com>"]
+
+[dependencies]
+rand = "*"
+sdl2 = "*"
+sdl2_image = "*"
