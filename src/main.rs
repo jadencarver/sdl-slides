@@ -15,6 +15,7 @@ const SCREEN_HALF: i32 = SCREEN_WIDTH / 2;
 const SCREEN_MIDDLE: i32 = SCREEN_HEIGHT / 2;
 
 mod models;
+use models::timeline;
 
 fn main() {
   let sdl_context = sdl2::init().unwrap();
@@ -27,9 +28,9 @@ fn main() {
 
   let mut event_pump = sdl_context.event_pump().unwrap();
   let mut renderer = window.renderer().present_vsync().build().unwrap();
-  let mut timeline = models::Timeline::new();
+  let mut timeline = models::timeline::Timeline::new();
 
-  timeline.add(models::Sprite::new(
+  timeline.add(models::sprite::Sprite::new(
     renderer.load_texture(Path::new("images/logo.png")).unwrap(),
     Rect::new_unwrap(SCREEN_HALF - 416, SCREEN_MIDDLE - 255, 833, 250)
   ));
